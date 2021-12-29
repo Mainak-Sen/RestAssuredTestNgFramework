@@ -32,10 +32,11 @@ public class TokenManager {
                 accessToken = response.path("access_token");
                 expiryTime = Instant.now().plusSeconds(expiryDuration - 300); //adding 300 secs of buffer
             } else {
-                System.out.println("Existing token is good to use!!");
+                System.out.println("Existing token is good to use!!..");
             }
         } catch (Exception e) {
-            throw new RuntimeException("Aborting Execution!!! Failed to get token "+e.getMessage());
+
+            throw new RuntimeException("Aborting Execution!!! Failed to get token "+ e.getMessage());
         }
 
         return accessToken;
