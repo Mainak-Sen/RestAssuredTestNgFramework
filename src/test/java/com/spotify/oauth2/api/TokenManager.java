@@ -35,7 +35,7 @@ public class TokenManager {
                 System.out.println("Existing token is good to use!!");
             }
         } catch (Exception e) {
-            throw new RuntimeException("Aborting Execution!!! Failed to get token");
+            throw new RuntimeException("Aborting Execution!!! Failed to get token "+e.getMessage());
         }
 
         return accessToken;
